@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neo-bg: #f0f0f0;
+  --color-neo-yellow: #FFDE59;
+  --color-neo-blue: #5454FF;
+  --color-neo-pink: #FF66C4;
+  --color-neo-green: #7ED957;
+  --color-neo-orange: #FF914D;
+  --color-neo-purple: #CB6CE6;
+  --shadow-neo: 5px 5px 0px 0px rgba(0,0,0,1);
+  --shadow-neo-sm: 3px 3px 0px 0px rgba(0,0,0,1);
+  --shadow-neo-lg: 8px 8px 0px 0px rgba(0,0,0,1);
+  
+  /* Custom animations */
+  --animate-bounce-slow: bounce-slow 3s ease-in-out infinite;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-float-delayed: float 4s ease-in-out infinite 1s;
+  --animate-wiggle: wiggle 2s ease-in-out infinite;
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-spin-slower: spin 15s linear infinite;
+}
+
+/* Custom keyframes */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(2deg); }
+  75% { transform: translateY(5px) rotate(-2deg); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+/* Utility classes for animations */
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.animate-wiggle {
+  animation: wiggle 2s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+.animate-spin-slower {
+  animation: spin 15s linear infinite;
+}
